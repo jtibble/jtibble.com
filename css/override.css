@@ -1,0 +1,20 @@
+a { 
+	color: rgb( 41, 207, 162);
+	font-size: 24px;
+}
+
+.well a i {
+	vertical-align: top;
+	margin: 3px;
+}
+    
+.nav-list>.active>a,
+.nav-list>.active>a:hover {  background-color: rgb( 41, 207, 162); }
+
+h1 {
+	font-size: 70px;
+}
+
+.smoothText {
+	text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
