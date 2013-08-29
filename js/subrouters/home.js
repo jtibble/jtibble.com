@@ -6,7 +6,7 @@ define( ['plugins/backbone/backbone.subroute'], function() {
 		return Backbone.SubRoute.extend({
 			routes:{
 				'' :		'emptyRoute',
-				'*actions':	'runModule',
+				'*actions':	'runModule'
 			},
 			emptyRoute: function(){
 				this.runModule( 'home');

@@ -8,6 +8,9 @@ require.config({
         'bootstrap': 'libs/bootstrap/js/bootstrap',
         'backbone': 'libs/backbone/backbone',
         
+		'controllers': 'controllers',
+		'views': 'views',
+		'models': 'models',
         'templates': '../templates'
     },
     shim: {
@@ -15,7 +18,8 @@ require.config({
             deps: ['jquery'],
             exports: 'Bootstrap'
         },
-    }
+    },
+	waitSeconds: 10
          
 });
 
@@ -28,8 +32,11 @@ require(['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _, Backbo
         "interpolate" : /{{=([\s\S]+?)}}/g,
         "escape" : /{{--([\s\S]+?)}}/g
     };
-    
-    require( ['main'], function(main){
-        main.init();
-    });
+	
+    console.log('Initializing router');
+	require(['router'], function(router){
+	   router.initialize(); 
+		Backbone.history.start();
+	});
+        
 });

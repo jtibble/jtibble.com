@@ -8,7 +8,9 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			// Routes evaluated most-to-least specific, with the last route becoming default
 			// NOTE: Only edit this if your screen (or set of screens) does not have an existing subrouter!
 			routes : {
-				'home': 	'homeSubrouter',				
+				'home': 	'homeSubrouter',
+				'wedding':	'weddingSubrouter',
+			
 				'*actions' : 	'unknownSubroute'
 			},
 			
@@ -19,6 +21,9 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			
 			homeSubrouter : function(subroute) {
 				this.loadSubrouter( 'home' );
+			},
+			weddingSubrouter : function(subroute) {
+				this.loadSubrouter( 'wedding' );
 			},
 			
 			loadSubrouter : function( subrouterName ){
