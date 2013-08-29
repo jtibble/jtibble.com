@@ -17,7 +17,7 @@ require.config({
         'bootstrap': {
             deps: ['jquery'],
             exports: 'Bootstrap'
-        },
+        }
     },
 	waitSeconds: 10
          
