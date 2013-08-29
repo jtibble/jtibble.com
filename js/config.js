@@ -1,5 +1,3 @@
-console.log('Running config.js');
-
 require.config({
     baseUrl: 'js',
     paths:{
@@ -19,13 +17,22 @@ require.config({
             exports: 'Bootstrap'
         }
     },
-	waitSeconds: 10
+	waitSeconds: 20
          
 });
 
 
 //'jquery', 'underscore', 'bootstrap', 'backbone'
 require(['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _, Backbone) {
+	
+	if( !window.console ){
+		window.console = {
+			log: function( message ){
+				// turn off for deployment, on for debugging on winphone
+				// alert('console missing: ' + message );
+			}
+		};
+	}
     
     _.templateSettings = {
         "evaluate" : /{{([\s\S]+?)}}/g,
@@ -33,9 +40,8 @@ require(['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _, Backbo
         "escape" : /{{--([\s\S]+?)}}/g
     };
 	
-    console.log('Initializing router');
 	require(['router'], function(router){
-	   router.initialize(); 
+		router.initialize(); 
 		Backbone.history.start();
 	});
         
