@@ -9,7 +9,7 @@ define( ['plugins/backbone/backbone.subroute'], function() {
 				'*actions':	'runModule'
 			},
 			emptyRoute: function(){
-				this.runModule( 'aboutUs');
+				this.runModule( 'wedding');
 			},
 			runModule: function( module ){
 				if( module !== 'wedding' ){
@@ -18,7 +18,7 @@ define( ['plugins/backbone/backbone.subroute'], function() {
 				
 				// Run the controller!
 				require([ 'controllers/' + module ], function( controller ){
-					if( !controller.run ){
+					if( !controller || !controller.run ){
 						throw 'Malformed controller: missing \'run\' method!';
 					}
 					

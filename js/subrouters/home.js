@@ -16,10 +16,15 @@ define( ['plugins/backbone/backbone.subroute'], function() {
 					module = 'home/' + module;
 				}
 				
-				//var layout = GECA.Router.LayoutEnforcer.getDefaultLayout();
-				
-				//GECA.Router.MainContentWrapper.changeMainContent( module, {}, layout );
-                
+				// Run the controller!
+				require([ 'controllers/' + module ], function( controller ){
+					if( !controller || !controller.run ){
+						debugger;
+						throw 'Malformed controller: missing \'run\' method!';
+					}
+					
+					controller.run( '.main-content');
+				});
                 console.log('in home subrouter');
 			}
 		});	
