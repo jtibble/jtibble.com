@@ -8,7 +8,6 @@ define(['text!templates/wedding/aboutUs.html'], function( template ){
 				throw 'No "el" element specified!';
 			}
 			
-			console.log('rendering aboutUsView');
 			$( this.options.el ).html( template );
 		}
 	});

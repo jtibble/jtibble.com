@@ -1,7 +1,9 @@
 /**
  * Subrouter for Home
  */
-define( ['plugins/backbone/backbone.subroute'], function() {
+define( ['text!templates/headers/headerHomeTemplate.html', 
+		 'plugins/backbone/backbone.subroute'], 
+	   function(headerHomeTemplate) {
 		
 		return Backbone.SubRoute.extend({
 			routes:{
@@ -15,6 +17,9 @@ define( ['plugins/backbone/backbone.subroute'], function() {
 				if( module !== 'home' ){
 					module = 'home/' + module;
 				}
+				
+				// Clear and re-render the header
+				$('#header').empty().html( headerHomeTemplate );
 				
 				// Run the controller!
 				require([ 'controllers/' + module ], function( controller ){
