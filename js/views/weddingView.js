@@ -2,7 +2,7 @@ define(['text!templates/wedding.html'], function( template ){
 	var view = Backbone.View.extend({
 		initialize: function(){
 			
-			this.content = [,
+			this.content = [
 				{
 					'date': 	'August 28, 2013', 
 				 	'title':	'New "About Us" Section!',
@@ -18,7 +18,8 @@ define(['text!templates/wedding.html'], function( template ){
 				 	'title':	'Website Being Built!',
 				 	'text':		'This is the first post with content in our new wedding website!'
 				}
-			]
+			];
+			
 			this.render();
 		},
 		render: function(){

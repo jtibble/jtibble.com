@@ -40,10 +40,19 @@ require(['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _, Backbo
         "escape" : /{{--([\s\S]+?)}}/g
     };
 	
-	require(['router'], function(router){
-		router.initialize(); 
-		$('.main-content').empty();
-		Backbone.history.start();
+	var UTILPromise = $.Deferred();
+	
+	require(['util'], function(util){
+		window.UTIL = util;
+		UTILPromise.resolve();
+	});
+	
+	$.when( UTILPromise ).then( function(){
+		require(['router'], function(router){
+			router.initialize(); 
+			$('.main-content').empty();
+			Backbone.history.start();
+		});
 	});
         
 });

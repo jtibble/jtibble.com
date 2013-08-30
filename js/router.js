@@ -1,6 +1,6 @@
 define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 		
-        window.Subrouters = [];
+        UTIL.Subrouters = [];
 	
 		// Create a new Backbone router object
 		var Router = Backbone.Router.extend({
@@ -17,6 +17,7 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			},
 			
 			unknownSubroute : function( route ){
+				console.log('Unknown route \'' + route + '\'');
                 window.Router.navigate('home', {trigger: true});
 			},
 			
@@ -34,8 +35,12 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			},
 			
 			loadSubrouter : function( subrouterName ){
+				if( UTIL.Subrouters[ subrouterName ] ){
+					return;
+				}
+				
                 require([ 'subrouters/' + subrouterName ], function( subrouter ){
-                    window.Subrouters[ subrouterName ] = new subrouter( subrouterName );
+                    UTIL.Subrouters[ subrouterName ] = new subrouter( subrouterName );
                 });
 			}
 		});

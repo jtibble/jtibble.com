@@ -3,7 +3,7 @@
  */
 define( ['text!templates/headers/headerHomeTemplate.html', 
 		 'plugins/backbone/backbone.subroute'], 
-	   function(headerHomeTemplate) {
+	   function(headerTemplate) {
 		
 		return Backbone.SubRoute.extend({
 			routes:{
@@ -18,17 +18,8 @@ define( ['text!templates/headers/headerHomeTemplate.html',
 					module = 'home/' + module;
 				}
 				
-				// Clear and re-render the header
-				$('#header').empty().html( headerHomeTemplate );
-				
-				// Run the controller!
-				require([ 'controllers/' + module ], function( controller ){
-					if( !controller || !controller.run ){
-						throw 'Malformed controller: missing \'run\' method!';
-					}
-					
-					controller.run( '.main-content');
-				});
+				UTIL.updateHeader( headerTemplate );
+				UTIL.changeMainContent( module );
 			}
 		});	
 });

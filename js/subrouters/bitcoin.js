@@ -16,18 +16,8 @@ define( ['text!templates/headers/headerBitcoinTemplate.html', 'plugins/backbone/
 					module = 'bitcoin/' + module;
 				}
 				
-				
-				// Clear and re-render the header
-				$('#header').empty().html( headerTemplate );
-				
-				// Run the controller!
-				require([ 'controllers/' + module ], function( controller ){
-					if( !controller || !controller.run ){
-						throw 'Malformed controller: missing \'run\' method!';
-					}
-					
-					controller.run( '.main-content');
-				});
+				UTIL.updateHeader( headerTemplate );
+				UTIL.changeMainContent( module );
 			}
 		});	
 });
