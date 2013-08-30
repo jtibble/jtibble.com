@@ -42,6 +42,7 @@ require(['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _, Backbo
 	
 	require(['router'], function(router){
 		router.initialize(); 
+		$('.main-content').empty();
 		Backbone.history.start();
 	});
         
