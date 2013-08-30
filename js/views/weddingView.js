@@ -2,12 +2,22 @@ define(['text!templates/wedding.html'], function( template ){
 	var view = Backbone.View.extend({
 		initialize: function(){
 			
-			this.content = [
-				{'text': 'Lorem Ipsum1'},
-				{'text': 'Lorem Ipsum2'},
-				{'text': 'Lorem Ipsum3'},
-				{'text': 'Lorem Ipsum4'},
-				{'text': 'Lorem Ipsum5'},
+			this.content = [,
+				{
+					'date': 	'August 28, 2013', 
+				 	'title':	'New "About Us" Section!',
+				 	'text':		'I added an "About Us" section in the links at the top! Check it out.'
+				},
+				{
+					'date': 	'August 29, 2013', 
+				 	'title':	'Content with HTML',
+				 	'text':		'Lorem Ipsum<br><img class="thumbnail" src="img/pictureOfUs.jpg"/>'
+				},
+				{
+					'date': 	'August 28, 2013', 
+				 	'title':	'Website Being Built!',
+				 	'text':		'This is the first post with content in our new wedding website!'
+				}
 			]
 			this.render();
 		},
