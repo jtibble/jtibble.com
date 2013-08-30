@@ -1,6 +1,14 @@
 define(['text!templates/wedding.html'], function( template ){
 	var view = Backbone.View.extend({
 		initialize: function(){
+			
+			this.content = [
+				{'text': 'Lorem Ipsum1'},
+				{'text': 'Lorem Ipsum2'},
+				{'text': 'Lorem Ipsum3'},
+				{'text': 'Lorem Ipsum4'},
+				{'text': 'Lorem Ipsum5'},
+			]
 			this.render();
 		},
 		render: function(){
@@ -8,8 +16,9 @@ define(['text!templates/wedding.html'], function( template ){
 				throw 'No "el" element specified!';
 			}
 			
-			console.log('rendering weddingView');
-			$( this.options.el ).html( template );
+			var compiledTemplate = _.template( template, {model: this.content} );	
+				
+			$( this.options.el ).html( compiledTemplate );
 		}
 	});
 									

@@ -24,8 +24,6 @@ define( ['plugins/backbone/backbone.subroute'], function() {
 					
 					controller.run( '.main-content');
 				});
-                
-                console.log('in wedding subrouter');
 			}
 		});	
 });
