@@ -10,6 +10,8 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			routes : {
 				'home': 	'homeSubrouter',
 				'wedding':	'weddingSubrouter',
+				'bitcoin':	'bitcoinSubrouter',
+				'umich':	'umichSubrouter',
 			
 				'*actions' : 	'unknownSubroute'
 			},
@@ -23,6 +25,12 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			},
 			weddingSubrouter : function(subroute) {
 				this.loadSubrouter( 'wedding' );
+			},
+			bitcoinSubrouter : function(subroute) {
+				this.loadSubrouter( 'bitcoin' );
+			},
+			umichSubrouter : function(subroute) {
+				this.loadSubrouter( 'umich' );
 			},
 			
 			loadSubrouter : function( subrouterName ){

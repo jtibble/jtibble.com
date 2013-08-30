@@ -1,7 +1,9 @@
 /**
  * Subrouter for Wedding
  */
-define( ['text!templates/headers/headerWeddingTemplate.html', 'plugins/backbone/backbone.subroute'], function(headerWeddingTemplate) {
+define( ['text!templates/headers/headerWeddingTemplate.html', 
+		 'plugins/backbone/backbone.subroute'], 
+	   function(headerTemplate) {
 		
 		return Backbone.SubRoute.extend({
 			routes:{
@@ -18,7 +20,7 @@ define( ['text!templates/headers/headerWeddingTemplate.html', 'plugins/backbone/
 				
 				
 				// Clear and re-render the header
-				$('#header').empty().html( headerWeddingTemplate );
+				$('#header').empty().html( headerTemplate );
 				
 				// Run the controller!
 				require([ 'controllers/' + module ], function( controller ){
