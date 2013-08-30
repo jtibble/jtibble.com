@@ -8,7 +8,6 @@ define(['text!templates/home.html'], function( template ){
 				throw 'No "el" element specified!';
 			}
 			
-			console.log('rendering homeView');
 			$( this.options.el ).html( template );
 		}
 	});

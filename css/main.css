@@ -14,13 +14,24 @@ div {
 	src: local('Shadows Into Light Two'), local('ShadowsIntoLightTwo-Regular'), url(http://themes.googleusercontent.com/static/fonts/shadowsintolighttwo/v1/gDxHeefcXIo-lOuZFCn2xU9H8fLq5zs1M0-u6-ewBcM.woff) format('woff');
 }
 
-.destination img{    
+/*.destinations div{
+	.roundedCorners;
+	.dropShadows;	
+}*/
+
+.roundedCorners{
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 	border-radius: 10px;
-    
+}
+
+.whiteBackground{
+	background-color: white;	
+}
+
+.dropShadow{
 	-webkit-box-shadow: 2px 2px 10px #333333;
 	-moz-box-shadow: 2px 2px 10px #333333;
 	-ms-box-shadow: 2px 2px 10px #333333;
