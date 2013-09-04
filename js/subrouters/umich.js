@@ -16,6 +16,7 @@ define( ['text!templates/headers/headerUMichTemplate.html', 'plugins/backbone/ba
 					module = 'umich/' + module;
 				}
 				
+				$('body').removeClass();
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}

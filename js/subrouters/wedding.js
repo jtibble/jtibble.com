@@ -18,6 +18,8 @@ define( ['text!templates/headers/headerWeddingTemplate.html',
 					module = 'wedding/' + module;
 				}
 				
+				
+				$('body').addClass('barkBackground');
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}

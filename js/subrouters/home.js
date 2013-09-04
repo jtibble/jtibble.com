@@ -18,6 +18,7 @@ define( ['text!templates/headers/headerHomeTemplate.html',
 					module = 'home/' + module;
 				}
 				
+				$('body').removeClass();
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}
