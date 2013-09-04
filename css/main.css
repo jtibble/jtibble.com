@@ -1,17 +1,20 @@
-body {
-    background-color: rgb(236,251,247);    
+.barkBackground
+{
+	background-image:url('../img/tree_bark.png');
+	background-repeat:repeat;
 }
 
-div {
-    font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
+
+.stylishFont {
+    font-family: Stylish, Helvetica, Arial, sans-serif;
 }
 
 
 @font-face {
-	font-family: 'Shadows Into Light Two';
+	font-family: 'Stylish';
 	font-style: normal;
-	font-weight: 400;
-	src: local('Shadows Into Light Two'), local('ShadowsIntoLightTwo-Regular'), url(http://themes.googleusercontent.com/static/fonts/shadowsintolighttwo/v1/gDxHeefcXIo-lOuZFCn2xU9H8fLq5zs1M0-u6-ewBcM.woff) format('woff');
+	font-weight: 800;
+	src: url('fonts/Stylish.ttf');
 }
 
 /*.destinations div{
