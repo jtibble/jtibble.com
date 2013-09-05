@@ -18,6 +18,8 @@ define( ['text!templates/headers/headerHomeTemplate.html',
 					module = 'home/' + module;
 				}
 				
+                $('body').removeClass();
+                $('body').addClass('texturedGreySquares');
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}

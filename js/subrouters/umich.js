@@ -16,6 +16,8 @@ define( ['text!templates/headers/headerUMichTemplate.html', 'plugins/backbone/ba
 					module = 'umich/' + module;
 				}
 				
+                $('body').removeClass();
+                $('body').addClass('texturedGreySquares');
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}

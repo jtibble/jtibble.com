@@ -18,6 +18,8 @@ define( ['text!templates/headers/headerWeddingTemplate.html',
 					module = 'wedding/' + module;
 				}
 				
+                $('body').removeClass();
+                $('body').addClass('texturedTreeBark');
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}

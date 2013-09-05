@@ -1,6 +1,17 @@
-body {
-    background-color: rgb(236,251,247);    
-}
+.texturedGreySquares{
+  background-image:url('../img/grey.png');
+  background-repeat:repeat;
+ }
+
+.texturedTreeBark{
+  background-image:url('../img/tree_bark.png');
+  background-repeat:repeat;
+ }
+
+.texturedPixelWeave{
+  background-image:url('../img/pixel_weave.png');
+  background-repeat:repeat;
+ }
 
 div {
     font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
