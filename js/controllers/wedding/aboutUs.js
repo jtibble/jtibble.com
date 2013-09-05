@@ -1,8 +1,8 @@
-define(['views/wedding/aboutUsView'], function(AboutUsView){
+define(['views/wedding/aboutUsView'], function(View){
 	
 	return {
 		run: function( container ){
-			var aboutUsView = new AboutUsView( {el: container} );
+			var view = new View( {el: container} );
 		}		
 	};
 });
