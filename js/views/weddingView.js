@@ -4,6 +4,11 @@ define(['text!templates/wedding.html'], function( template ){
 			
 			this.content = [
 				{
+					'date': 	'September 5, 2013', 
+				 	'title':	'Big Changes!',
+				 	'text':		'I\'ve added two new sections, \'Wedding Information\' and \'Registry\'. They\'re empty for now, but soon will filled with info. There have been lots of changes behind-the-scenes, and hopefully a new layout and design are coming soon!'
+				},
+				{
 					'date': 	'August 28, 2013', 
 				 	'title':	'New "About Us" Section!',
 				 	'text':		'I added an "About Us" section in the links at the top! Check it out.'
