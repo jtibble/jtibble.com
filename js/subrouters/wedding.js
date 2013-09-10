@@ -18,7 +18,6 @@ define( ['plugins/backbone/backbone.subroute'],
 				}
 				
                 $('body').removeClass();
-                $('body').addClass('texturedTreeBark');
 				UTIL.updateHeader( '' );
 				UTIL.changeMainContent( module );
 			}
