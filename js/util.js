@@ -3,7 +3,10 @@ define([], function(){
 	
 	
 	UTIL.updateHeader = function( headerTemplate ){
-		$('#header').empty().html( headerTemplate );
+		$('#header').empty();
+        if( headerTemplate.length ){
+            $('header').html( headerTemplate );
+        }
 	};
 	
 	UTIL.changeMainContent = function( controller ){
