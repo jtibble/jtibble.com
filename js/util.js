@@ -5,9 +5,17 @@ define([], function(){
 	UTIL.updateHeader = function( headerTemplate ){
 		$('#header').empty().html( headerTemplate );
 	};
+    
+    
+    UTIL.changeBackground = function( background ){
+        $('body').removeClass();
+        $('body').addClass( background );
+    };
 	
-	UTIL.changeMainContent = function( controller ){
+	UTIL.changeMainContent = function( controller, background ){
 		
+        
+        
 		console.log( 'Changing main-content to controllers/'+controller );
 		
 		try{

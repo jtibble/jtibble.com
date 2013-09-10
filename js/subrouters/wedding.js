@@ -19,7 +19,6 @@ define( ['text!templates/headers/headerWeddingTemplate.html',
 				}
 				
                 $('body').removeClass();
-                $('body').addClass('texturedTreeBark');
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}
