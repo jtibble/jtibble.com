@@ -12,6 +12,10 @@ div {
     font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
 }
 
+a img{
+    margin: 20px;
+}
+
 
 @font-face {
 	font-family: 'Shadows Into Light Two';
