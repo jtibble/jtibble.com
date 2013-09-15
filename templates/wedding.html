@@ -1,27 +1,45 @@
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span2"></div>
-		<div class="span8 whiteBackground roundedCorners">
-			
-			{{_.each( model, function(item){ }}
-				<div class="row-fluid">
-					<div class="span3">
-						{{=item.date}}
-					</div>
-					<div class="span9 ">
-						<div class="article dropShadow roundedCorner">
-							<div class="articleTitle">
-								{{=item.title}}
-							</div>
-							<div class="articleContent">
-								{{=item.text}}
-							</div>
-						</div>
-					</div>
-				</div>
-			{{ }); }}
-			
-		</div>
-		<div class="span2"></div>
-	</div>
+<div class="container">
+        
+        <div id="header"></div>
+            
+        <div id="info" class="row" style="margin: 50px 0 50px 0">
+            <div class="span8" style="float: none; margin: 0 auto;">
+                <img src="img/wedding/info.png">
+            </div>
+        </div>
+    
+        <div class="row" style="float: none; margin: 0 0 0 100px">
+            <div class="span4 menuItemBox" id="menuItemBoxStory">
+                <a id="menuItemLinkStory" class="menuItemLink" href="#wedding/story">The Story</a>
+            </div>
+            <div class="span4 menuItemBox" id="menuItemBoxCeremony">
+                <a id="menuItemLinkCeremony" class="menuItemLink" href="#wedding/ceremony">Ceremony and Reception</a>
+            </div>
+            <div class="span4 menuItemBox" id="menuItemBoxParty">
+                <a id="menuItemLinkParty" class="menuItemLink" href="#wedding/party">Party</a>
+            </div>
+        </div>
+    
+        <div class="row" style="float: none; margin: 0 0 100px 100px">
+            <div class="span4 menuItemBox" id="menuItemBoxRegistry">
+                <a id="menuItemLinkRegistry" class="menuItemLink" href="#wedding/registry">Registry</a>
+            </div>
+            <div class="span4 menuItemBox" id="menuItemBoxInfo">
+                <a id="menuItemLinkInfo" class="menuItemLink" href="#wedding/info">More Info</a>
+            </div>
+            <div class="span4 menuItemBox" id="menuItemBoxPhotos">
+                <a id="menuItemLinkPhotos" class="menuItemLink" href="#wedding/photos">Photos</a>
+            </div>
+        </div>
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </div>

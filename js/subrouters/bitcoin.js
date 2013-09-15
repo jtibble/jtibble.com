@@ -16,8 +16,7 @@ define( ['text!templates/headers/headerBitcoinTemplate.html', 'plugins/backbone/
 					module = 'bitcoin/' + module;
 				}
 				
-                $('body').removeClass();
-                $('body').addClass('texturedPixelWeave');
+                UTIL.changeBackground( 'texturedGreySquares');
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}

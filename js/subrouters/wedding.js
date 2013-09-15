@@ -1,9 +1,8 @@
 /**
  * Subrouter for Wedding
  */
-define( ['text!templates/headers/headerWeddingTemplate.html', 
-		 'plugins/backbone/backbone.subroute'], 
-	   function(headerTemplate) {
+define( ['plugins/backbone/backbone.subroute'], 
+	   function() {
 		
 		return Backbone.SubRoute.extend({
 			routes:{
@@ -18,9 +17,8 @@ define( ['text!templates/headers/headerWeddingTemplate.html',
 					module = 'wedding/' + module;
 				}
 				
-                $('body').removeClass();
-                $('body').addClass('texturedTreeBark');
-				UTIL.updateHeader( headerTemplate );
+                UTIL.changeBackground( 'weddingGradient');
+				UTIL.updateHeader( '' );
 				UTIL.changeMainContent( module );
 			}
 		});	

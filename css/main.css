@@ -3,18 +3,17 @@
   background-repeat:repeat;
  }
 
-.texturedTreeBark{
-  background-image:url('../img/tree_bark.png');
-  background-repeat:repeat;
- }
-
-.texturedPixelWeave{
-  background-image:url('../img/pixel_weave.png');
-  background-repeat:repeat;
+.weddingGradient{
+  background-image:url('../img/wedding/bg.jpg');
+  background-repeat:repeat-x;
  }
 
 div {
     font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
+}
+
+a img{
+    margin: 20px;
 }
 
 
@@ -61,12 +60,74 @@ div {
 	box-shadow: 2px 2px 10px #333333;
 }
 
-.center { 
-	float: none; 
-	margin-left: auto; 
-	margin-right: auto; 
+.center {
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
 }
 
 img.thumbnail{
 	height: 100px;
+}
+
+
+.menuItemBox {
+    background-clip: border-box;  
+    height: 180px;
+}
+
+#menuItemBoxStory {
+    background: url('../img/wedding/sprite.png') -20px -125px no-repeat;
+    width: 290px;
+}
+#menuItemBoxCeremony {
+    background: url('../img/wedding/sprite.png') -313px -125px no-repeat; 
+    width: 280px;
+}
+#menuItemBoxParty {
+    background: url('../img/wedding/sprite.png') -593px -125px no-repeat; 
+    width: 290px; 
+}
+#menuItemBoxRegistry {
+    background: url('../img/wedding/sprite.png') -20px -311px no-repeat; 
+    width: 290px; 
+}
+#menuItemBoxInfo {
+    background: url('../img/wedding/sprite.png') -315px -311px no-repeat;
+    width: 280px;  
+}
+#menuItemBoxPhotos {
+    background: url('../img/wedding/sprite.png') -600px -311px no-repeat; 
+    width: 290px;
+}
+
+.menuItemLink {
+    display: block;
+    width: 290px;
+    text-indent: -9999px;
+}
+
+#menuItemLinkStory {
+    background: url('../img/wedding/sprite.png') -45px -660px no-repeat;
+    height: 180px;
+}
+#menuItemLinkCeremony {
+    background: url('../img/wedding/sprite.png') -320px -550px no-repeat;
+    height: 180px;
+}
+#menuItemLinkParty {
+    background: url('../img/wedding/sprite.png') -610px -580px no-repeat;
+    height: 180px;
+}
+#menuItemLinkRegistry {
+    background: url('../img/wedding/sprite.png') -25px -810px no-repeat;
+    height: 180px;
+}
+#menuItemLinkInfo {
+    background: url('../img/wedding/sprite.png') -310px -750px no-repeat;
+    height: 180px;
+}
+#menuItemLinkPhotos {
+    background: url('../img/wedding/sprite.png') -600px -780px no-repeat;
+    height: 180px;
 }
