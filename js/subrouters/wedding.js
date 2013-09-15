@@ -17,7 +17,7 @@ define( ['plugins/backbone/backbone.subroute'],
 					module = 'wedding/' + module;
 				}
 				
-                $('body').removeClass();
+                UTIL.changeBackground( 'weddingGradient');
 				UTIL.updateHeader( '' );
 				UTIL.changeMainContent( module );
 			}

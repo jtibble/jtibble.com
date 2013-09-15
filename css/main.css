@@ -3,6 +3,11 @@
   background-repeat:repeat;
  }
 
+.weddingGradient{
+  background-image:url('../img/wedding/bg.jpg');
+  background-repeat:repeat-x;
+ }
+
 div {
     font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
 }
