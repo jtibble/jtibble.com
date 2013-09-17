@@ -1,5 +1,5 @@
 /**
- * Subrouter for Wedding
+ * Subrouter for Graphics
  */
 define( ['plugins/backbone/backbone.subroute'], function() {
 		

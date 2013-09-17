@@ -13,6 +13,7 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 				'bitcoin':	'bitcoinSubrouter',
 				'umich':	'umichSubrouter',
                 'graphics': 'graphicsSubrouter',
+                'robotics': 'roboticsSubrouter',
 			
 				'*actions' : 	'unknownSubroute'
 			},
@@ -35,6 +36,9 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			},
             graphicsSubrouter : function(subroute) {
 				this.loadSubrouter( 'graphics' );
+			},
+            roboticsSubrouter : function(subroute) {
+				this.loadSubrouter( 'robotics' );
 			},
             
 			loadSubrouter : function( subrouterName ){

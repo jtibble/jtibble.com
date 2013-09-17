@@ -1,7 +1,7 @@
 /**
- * Subrouter for U of M content
+ * Subrouter for Robotics
  */
-define( ['text!templates/headers/headerUMichTemplate.html', 'plugins/backbone/backbone.subroute'], function(headerTemplate) {
+define( ['plugins/backbone/backbone.subroute'], function() {
 		
 		return Backbone.SubRoute.extend({
 			routes:{
@@ -9,15 +9,14 @@ define( ['text!templates/headers/headerUMichTemplate.html', 'plugins/backbone/ba
 				'*actions':	'runModule'
 			},
 			emptyRoute: function(){
-				this.runModule( 'umich');
+				this.runModule( 'robotics');
 			},
 			runModule: function( module ){
-				if( module !== 'umich' ){
-					module = 'umich/' + module;
+				if( module !== 'robotics' ){
+					module = 'robotics/' + module;
 				}
 				
                 UTIL.changeBackground( 'texturedGreySquares');
-				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}
 		});	
