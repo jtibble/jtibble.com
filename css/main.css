@@ -8,6 +8,42 @@
   background-repeat:repeat-x;
  }
 
+.weddingDoodle1{
+	background-image: url('../img/wedding/doodle1.png');
+	position: relative;
+	z-index: 0;
+}
+.weddingDoodle2{
+	background-image: url('../img/wedding/doodle2.png');
+	position: relative;
+	z-index: 0;
+}
+
+.weddingHeaderContainer{
+	background-image: url( '../img/wedding/header_bg.png');
+	background-repeat:repeat-x;
+	height: 154px;
+	position: relative;
+	z-index: 2;
+}
+
+.weddingInfoContainer{
+	margin: -20px 0 50px 0;
+	padding-top: 20px;
+	background-image: url( '../img/wedding/texture.png');
+	background-repeat:repeat;
+	position: relative;
+	z-index: 1;
+}
+
+.animatedGIF {
+    width: 500px;
+}
+
+.animatedGIFSmall{
+    width: 300px;
+}
+
 div {
     font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
 }
@@ -69,6 +105,11 @@ a img{
 img.thumbnail{
 	height: 100px;
 }
+
+
+
+
+
 
 
 .menuItemBox {

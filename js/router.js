@@ -12,12 +12,13 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 				'wedding':	'weddingSubrouter',
 				'bitcoin':	'bitcoinSubrouter',
 				'umich':	'umichSubrouter',
+                'graphics': 'graphicsSubrouter',
+                'robotics': 'roboticsSubrouter',
 			
 				'*actions' : 	'unknownSubroute'
 			},
 			
-			unknownSubroute : function( route ){
-				console.log('Unknown route \'' + route + '\'');
+			unknownSubroute : function( route ){                
                 window.Router.navigate('home', {trigger: true});
 			},
 			
@@ -33,7 +34,13 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			umichSubrouter : function(subroute) {
 				this.loadSubrouter( 'umich' );
 			},
-			
+            graphicsSubrouter : function(subroute) {
+				this.loadSubrouter( 'graphics' );
+			},
+            roboticsSubrouter : function(subroute) {
+				this.loadSubrouter( 'robotics' );
+			},
+            
 			loadSubrouter : function( subrouterName ){
 				if( UTIL.Subrouters[ subrouterName ] ){
 					return;
