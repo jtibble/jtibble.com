@@ -1,13 +1,12 @@
-<div class="container">
-	{{ _.each( model.items, function( item ){ }}
-		<div class="row-fluid">
-			<div class="span1"></div>
-			<div class="span10">
-				
-				<a href="{{=item.destinationURL}}"><img class="roundedCorners" src="{{=item.imageURL}}"/>{{=item.text}}</a>				
-				
+{{ _.each( model.items, function( item ){ }}
+	<div class="row-fluid">
+		<a href="{{=item.destinationURL}}">
+			<div class="span6">
+				<img class="roundedCorners animatedGIF"" src="{{=item.imageURL}}"/>
 			</div>
-			<div class="span1"></div>
-		</div>
-	{{ }); }}
-</div>
+			<div class="span6">
+				{{=item.text}}	
+			</div>
+		</a>
+	</div>
+{{ }); }}

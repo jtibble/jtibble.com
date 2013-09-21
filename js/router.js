@@ -12,13 +12,15 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 				'wedding':	'weddingSubrouter',
 				'bitcoin':	'bitcoinSubrouter',
 				'umich':	'umichSubrouter',
+				'robotics': 'roboticsSubrouter',
+				'graphics': 'graphicsSubrouter',
 			
 				'*actions' : 	'unknownSubroute'
 			},
 			
 			unknownSubroute : function( route ){
 				
-				if( !route.length ){
+				if( !route ){
 					console.log('Empty route, redirecting to home');
                 	window.Router.navigate('home', {trigger: true});
 					return;
@@ -30,8 +32,15 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 					console.log('Unknown route \'' + route + '\', attempting to load subrouter');
 					this.loadSubrouter( subrouter );
 				} else {
-					console.log('Unknown route \'' + route + '\', no subrouter. Redirecting to home');
-					window.Router.navigate( 'home', {trigger: true} );
+					
+					try{
+						require(['controllers/'+route], function(controller){
+							controller.run('.main-content');
+						});
+					} catch(e){
+						console.log('Tried and failed to run controller without subrouter. Navigating home');
+						window.Router.navigate( 'home', {trigger: true} );
+					}
 				}
 				
 			},
@@ -48,13 +57,21 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			umichSubrouter : function(subroute) {
 				this.loadSubrouter( 'umich' );
 			},
+			roboticsSubrouter : function(subroute) {
+				this.loadSubrouter( 'robotics' );
+			},
+			graphicsSubrouter: function(subroute) {
+				this.loadSubrouter( 'graphics' );
+			},
 			
 			loadSubrouter : function( subrouterName ){
 				if( UTIL.Subrouters[ subrouterName ] ){
+					console.log('No subrouter found by this name');
 					return;
 				}
 				
                 require([ 'subrouters/' + subrouterName ], function( subrouter ){
+					console.log( 'Subrouter \'' + subrouterName + '\' loaded' );
                     UTIL.Subrouters[ subrouterName ] = new subrouter( subrouterName );
                 });
 			}
