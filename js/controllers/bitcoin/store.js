@@ -1,4 +1,4 @@
-define(['views/bitcoinView'], function(View){
+define(['views/bitcoin/storeView'], function(View){
 	
 	return {
 		run: function( container ){

@@ -17,8 +17,23 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			},
 			
 			unknownSubroute : function( route ){
-				console.log('Unknown route \'' + route + '\'');
-                window.Router.navigate('home', {trigger: true});
+				
+				if( !route.length ){
+					console.log('Empty route, redirecting to home');
+                	window.Router.navigate('home', {trigger: true});
+					return;
+				}
+				
+				var subrouter = route.split('/')[0];
+				
+				if( this.routes[ subrouter ] ){
+					console.log('Unknown route \'' + route + '\', attempting to load subrouter');
+					this.loadSubrouter( subrouter );
+				} else {
+					console.log('Unknown route \'' + route + '\', no subrouter. Redirecting to home');
+					window.Router.navigate( 'home', {trigger: true} );
+				}
+				
 			},
 			
 			homeSubrouter : function(subroute) {
