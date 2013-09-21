@@ -44,6 +44,15 @@
     width: 300px;
 }
 
+.gifListTitle {
+	padding-top: 30px;
+	font-size: 20px;
+}
+
+.gifListText {
+	padding: 30px;
+}
+
 div {
     font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
 }
