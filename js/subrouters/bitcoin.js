@@ -1,5 +1,5 @@
 /**
- * Subrouter for Wedding
+ * Subrouter for Bitcoin
  */
 define( ['text!templates/headers/headerBitcoinTemplate.html', 'plugins/backbone/backbone.subroute'], function(headerTemplate) {
 		

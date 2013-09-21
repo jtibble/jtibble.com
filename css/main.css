@@ -36,6 +36,14 @@
 	z-index: 1;
 }
 
+.animatedGIF {
+    width: 500px;
+}
+
+.animatedGIFSmall{
+    width: 300px;
+}
+
 div {
     font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
 }
@@ -97,6 +105,11 @@ a img{
 img.thumbnail{
 	height: 100px;
 }
+
+
+
+
+
 
 
 .menuItemBox {
