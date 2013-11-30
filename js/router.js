@@ -21,6 +21,13 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 				}
 				
 				var subrouter = route.split('/')[0];
+				
+				// Change the background
+				if( subrouter == 'wedding' ){
+					UTIL.changeBackground( 'weddingGradient' );
+				} else {
+					UTIL.changeBackground( 'texturedGreySquares' );
+				}
 									
                 // Try to load the route as a template
                 //  ...failing that, try to load it as a controller

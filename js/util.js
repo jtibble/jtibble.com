@@ -17,8 +17,6 @@ define([], function(){
 	
 	UTIL.changeMainContent = function( controller, background ){
 		
-        
-        
 		console.log( 'Changing main-content to controllers/'+controller );
 		
 		try{
