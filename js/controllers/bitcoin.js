@@ -1,8 +1,8 @@
-define(['views/bitcoinView'], function(BitcoinView){
+define(['views/bitcoinView'], function(View){
 	
 	return {
 		run: function( container ){
-			var weddingView = new BitcoinView( {el: container} );
+			var view = new View( {el: container} );
 		}		
 	};
 });

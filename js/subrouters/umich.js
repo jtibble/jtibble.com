@@ -1,5 +1,5 @@
 /**
- * Subrouter for Wedding
+ * Subrouter for U of M content
  */
 define( ['text!templates/headers/headerUMichTemplate.html', 'plugins/backbone/backbone.subroute'], function(headerTemplate) {
 		
@@ -16,8 +16,7 @@ define( ['text!templates/headers/headerUMichTemplate.html', 'plugins/backbone/ba
 					module = 'umich/' + module;
 				}
 				
-                $('body').removeClass();
-                $('body').addClass('texturedGreySquares');
+                UTIL.changeBackground( 'texturedGreySquares');
 				UTIL.updateHeader( headerTemplate );
 				UTIL.changeMainContent( module );
 			}

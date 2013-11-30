@@ -8,40 +8,41 @@ define(	'router', ['jquery', 'backbone', 'underscore'], function() {
 			// Routes evaluated most-to-least specific, with the last route becoming default
 			// NOTE: Only edit this if your screen (or set of screens) does not have an existing subrouter!
 			routes : {
-				'home': 	'homeSubrouter',
-				'wedding':	'weddingSubrouter',
-				'bitcoin':	'bitcoinSubrouter',
-				'umich':	'umichSubrouter',
-			
-				'*actions' : 	'unknownSubroute'
+				'*actions' : 	'allRoutes'
 			},
 			
-			unknownSubroute : function( route ){
-				console.log('Unknown route \'' + route + '\'');
-                window.Router.navigate('home', {trigger: true});
-			},
-			
-			homeSubrouter : function(subroute) {
-				this.loadSubrouter( 'home' );
-			},
-			weddingSubrouter : function(subroute) {
-				this.loadSubrouter( 'wedding' );
-			},
-			bitcoinSubrouter : function(subroute) {
-				this.loadSubrouter( 'bitcoin' );
-			},
-			umichSubrouter : function(subroute) {
-				this.loadSubrouter( 'umich' );
-			},
-			
-			loadSubrouter : function( subrouterName ){
-				if( UTIL.Subrouters[ subrouterName ] ){
+			allRoutes : function( route ){
+				
+                // If supplied with empty route, go home
+				if( !route ){
+					console.log('Empty route, redirecting to home');
+                	window.Router.navigate('home', {trigger: true});
 					return;
 				}
 				
-                require([ 'subrouters/' + subrouterName ], function( subrouter ){
-                    UTIL.Subrouters[ subrouterName ] = new subrouter( subrouterName );
+				var subrouter = route.split('/')[0];
+				
+				// Change the background
+				if( subrouter == 'wedding' ){
+					UTIL.changeBackground( 'weddingGradient' );
+				} else {
+					UTIL.changeBackground( 'texturedGreySquares' );
+				}
+									
+                // Try to load the route as a template
+                //  ...failing that, try to load it as a controller
+                require(['text!templates/'+ route + '.html'], function( template ){
+                        $('.main-content').html( template );
+                }, function( err ){
+                    console.log('Tried and failed to load+render template. Attempting to load controller by that name.');
+                    require(['controllers/'+route], function(controller){
+                        controller.run('.main-content');
+                    }, function(err){
+                        console.log('Failed. Giving up and going home.');
+                	   window.Router.navigate('home', {trigger: true});
+                    });
                 });
+				
 			}
 		});
 	

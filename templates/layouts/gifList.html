@@ -1,0 +1,22 @@
+{{ _.each( model.items, function( item ){ }}
+	<div class="row-fluid">
+		<a href="{{=item.destinationURL}}">
+			<div class="span6">
+				<img class="roundedCorners animatedGIF" src="{{=item.imageURL}}"/>
+			</div>
+			<div class="span6">
+				{{ if( item.title ){ }}
+					<div class="row-fluid">
+						<div class="span12 gifListTitle">{{=item.title}}</div><br/>
+					</div>
+				{{ } }}
+				
+				{{ if( item.text ){ }}
+					<div class="row-fluid">
+						<div class="span12 gifListText">{{=item.text}}</div>
+					</div>
+				{{ } }}
+			</div>
+		</a>
+	</div>
+{{ }); }}
