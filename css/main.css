@@ -123,7 +123,7 @@ img.thumbnail{
     background-clip: border-box; 
 	cursor: pointer;
 	height: 180px;
-	margin: 10px
+	margin: 0 auto;
 }
 
 #menuItemBoxStory {
