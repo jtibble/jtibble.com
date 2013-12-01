@@ -53,27 +53,9 @@
 	padding: 30px;
 }
 
-div {
-    font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
-}
-
 a img{
     margin: 20px;
 }
-
-
-@font-face {
-	font-family: 'Shadows Into Light Two';
-	font-family: 'Stylish';
-	font-style: normal;
-	font-weight: 800;
-	src: url('fonts/Stylish.ttf');
-}
-
-/*.destinations div{
-	.roundedCorners;
-	.dropShadows;	
-}*/
 
 .article{
 	margin: 20px;
@@ -106,9 +88,7 @@ a img{
 }
 
 .center {
-     float: none;
-     margin-left: auto;
-     margin-right: auto;
+	margin: 0 auto;
 }
 
 img.thumbnail{
@@ -119,11 +99,11 @@ img.thumbnail{
 
 
 
-
-
 .menuItemBox {
-    background-clip: border-box;  
-    height: 180px;
+    background-clip: border-box; 
+	cursor: pointer;
+	height: 180px;
+	margin: 0 auto;
 }
 
 #menuItemBoxStory {
@@ -180,4 +160,40 @@ img.thumbnail{
 #menuItemLinkPhotos {
     background: url('../img/wedding/sprite.png') -600px -780px no-repeat;
     height: 180px;
+}
+
+.carousel-inner{
+	max-height: 400px;
+}
+
+
+.carouselText{
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-family: Witness, Helvetica, Arial, sans-serif;
+	font-size: 48px;
+}
+
+@font-face {
+	font-family: 'Witness';
+	font-family: 'Witness';
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/Witness.ttf');
+}
+
+
+.weddingContainerWrapper{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.chalkboardImage{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 700px;
+}
+
+.chalkboardBackground {
+	background-image: url("../img/wedding/chalkboard.png");
 }
