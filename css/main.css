@@ -4,19 +4,20 @@
  }
 
 .weddingGradient{
-  background-image:url('../img/wedding/bg.jpg');
-  background-repeat:repeat-x;
+  background-image: url("../img/wedding/bg_tile.jpg");
+  background-repeat: repeat;
  }
 
-.weddingDoodle1{
-	background-image: url('../img/wedding/doodle1.png');
-	position: relative;
-	z-index: 0;
+.doodle{
+	position: absolute;
 }
-.weddingDoodle2{
-	background-image: url('../img/wedding/doodle2.png');
-	position: relative;
-	z-index: 0;
+
+#storyDoodle{
+	margin-left: -200px;
+}
+
+#storyDoodle2{
+	float: right;
 }
 
 .weddingHeaderContainer{
@@ -98,6 +99,17 @@ img.thumbnail{
 
 
 
+.headerLeftText {
+	background: url('../img/wedding/sprite.png') -313px 0px no-repeat;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 500px;
+	height: 50px;
+	margin-top: -50px;
+	margin-left: -70px;
+	z-index: 3;
+}
+
 
 .menuItemBox {
     background-clip: border-box; 
@@ -131,36 +143,7 @@ img.thumbnail{
     width: 290px;
 }
 
-.menuItemLink {
-    display: block;
-    width: 290px;
-    text-indent: -9999px;
-}
 
-#menuItemLinkStory {
-    background: url('../img/wedding/sprite.png') -45px -660px no-repeat;
-    height: 180px;
-}
-#menuItemLinkCeremony {
-    background: url('../img/wedding/sprite.png') -320px -550px no-repeat;
-    height: 180px;
-}
-#menuItemLinkParty {
-    background: url('../img/wedding/sprite.png') -610px -580px no-repeat;
-    height: 180px;
-}
-#menuItemLinkRegistry {
-    background: url('../img/wedding/sprite.png') -25px -810px no-repeat;
-    height: 180px;
-}
-#menuItemLinkInfo {
-    background: url('../img/wedding/sprite.png') -310px -750px no-repeat;
-    height: 180px;
-}
-#menuItemLinkPhotos {
-    background: url('../img/wedding/sprite.png') -600px -780px no-repeat;
-    height: 180px;
-}
 
 .carousel-inner{
 	max-height: 400px;
