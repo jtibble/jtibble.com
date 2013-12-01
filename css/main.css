@@ -53,21 +53,8 @@
 	padding: 30px;
 }
 
-div {
-    font-family: Stylish, Helvetica, Arial, sans-serif;
-}
-
 a img{
     margin: 20px;
-}
-
-
-@font-face {
-	font-family: 'Stylish';
-	font-family: 'Stylish';
-	font-style: normal;
-	font-weight: 800;
-	src: url('fonts/Stylish.ttf');
 }
 
 .article{
