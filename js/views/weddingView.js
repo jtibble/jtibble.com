@@ -1,4 +1,8 @@
-define(['text!templates/wedding/wedding.html'], function( template ){
+define(['text!templates/wedding/wedding.html',
+		
+		'text!templates/wedding/story.html',
+	    'text!templates/wedding/ceremony.html',
+	    'text!templates/wedding/party.html' ], function( template, storyTemplate, ceremonyTemplate, partyTemplate ){
 	var view = Backbone.View.extend({
 		events: {
 			'click #menuItemBoxStory': 		'showStory',
@@ -19,13 +23,52 @@ define(['text!templates/wedding/wedding.html'], function( template ){
 			$( this.options.el ).html( template );
 		},
 		showStory: function(){
-			console.log('show story');	
+			var setting = {
+				opacity: 0.0,
+				height: 'toggle'
+			};
+			
+			$('#weddingContainer').animate( setting, 500, function(){
+				$('#weddingContainer').html( storyTemplate );
+				$('#weddingContainer').animate( {
+					opacity: 1.0,
+					height: 'toggle'
+				});
+			});	
 		},
 		showCeremony: function(){
-			console.log('show ceremony');	
+			var setting = {
+				opacity: 0.0,
+				height: 'toggle'
+			};
+			
+			$('#weddingContainer').animate( setting, 500, function(){
+				$('#weddingContainer').html( ceremonyTemplate );
+				$('#weddingContainer').animate( {
+					opacity: 1.0,
+					height: 'toggle'
+				});
+			});
 		},
 		showParty: function(){
-			console.log('show party');	
+			var setting = {
+				opacity: 0.0,
+				height: 'toggle'
+			};
+			
+			$('#weddingContainer').animate( setting, 500, function(){
+				$('#weddingContainer').html( partyTemplate );
+				
+				$('#partyCarousel').carousel({
+					'interval': false	
+				});
+				
+				$('#weddingContainer').animate( {
+					opacity: 1.0,
+					height: 'toggle'
+				});
+				
+			});
 		},
 		showRegistry: function(){
 			console.log('show registry');	
