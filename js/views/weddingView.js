@@ -2,7 +2,16 @@ define(['text!templates/wedding/wedding.html',
 		
 		'text!templates/wedding/story.html',
 	    'text!templates/wedding/ceremony.html',
-	    'text!templates/wedding/party.html' ], function( template, storyTemplate, ceremonyTemplate, partyTemplate ){
+	    'text!templates/wedding/party.html',
+	    'text!templates/wedding/registry.html',
+	    'text!templates/wedding/info.html',
+        'text!templates/wedding/photos.html'], function( template, 
+                                                         storyTemplate,
+                                                         ceremonyTemplate, 
+                                                         partyTemplate,
+                                                         registryTemplate,
+                                                         infoTemplate,
+                                                         photosTemplate){
 	var view = Backbone.View.extend({
 		events: {
 			'click #menuItemBoxStory': 		'showStory',
@@ -22,33 +31,12 @@ define(['text!templates/wedding/wedding.html',
 			
 			$( this.options.el ).html( template );
 		},
+        
 		showStory: function(){
-			var setting = {
-				opacity: 0.0,
-				height: 'toggle'
-			};
-			
-			$('#weddingContainer').animate( setting, 500, function(){
-				$('#weddingContainer').html( storyTemplate );
-				$('#weddingContainer').animate( {
-					opacity: 1.0,
-					height: 'toggle'
-				});
-			});	
+			this.changeWeddingContentTemplate( storyTemplate );
 		},
 		showCeremony: function(){
-			var setting = {
-				opacity: 0.0,
-				height: 'toggle'
-			};
-			
-			$('#weddingContainer').animate( setting, 500, function(){
-				$('#weddingContainer').html( ceremonyTemplate );
-				$('#weddingContainer').animate( {
-					opacity: 1.0,
-					height: 'toggle'
-				});
-			});
+			this.changeWeddingContentTemplate( ceremonyTemplate );
 		},
 		showParty: function(){
 			var setting = {
@@ -71,14 +59,49 @@ define(['text!templates/wedding/wedding.html',
 			});
 		},
 		showRegistry: function(){
-			console.log('show registry');	
+			this.changeWeddingContentTemplate( registryTemplate );	
 		},
 		showInfo: function(){
-			console.log('show info');	
+			this.changeWeddingContentTemplate( infoTemplate );	
 		},
 		showPhotos: function(){
-			console.log('show photos');	
-		}
+			var setting = {
+				opacity: 0.0,
+				height: 'toggle'
+			};
+			
+			$('#weddingContainer').animate( setting, 500, function(){
+				$('#weddingContainer').html( photosTemplate );
+				
+				$('#photosCarousel').carousel({
+					'interval': false	
+				});
+				
+				$('#weddingContainer').animate( {
+					opacity: 1.0,
+					height: 'toggle'
+				});
+				
+			});
+		},
+        
+        changeWeddingContentTemplate: function( template ){
+            
+			var setting = {
+				opacity: 0.0,
+				height: 'toggle'
+			};
+            
+            var animationTime = 500;
+            
+			$('#weddingContainer').animate( setting, animationTime, function(){
+				$('#weddingContainer').html( template );
+				$('#weddingContainer').animate( {
+					opacity: 1.0,
+					height: 'toggle'
+				});
+			});
+        }
 	});
 									
 	return view;

@@ -144,17 +144,19 @@ img.thumbnail{
 }
 
 
-
-.carousel-inner{
-	max-height: 400px;
-}
-
-
-.carouselText{
-	margin-bottom: 20px;
+.weddingFont {
 	font-weight: 700;
 	font-family: Witness, Helvetica, Arial, sans-serif;
 	font-size: 48px;
+}
+
+
+.carousel-inner img{
+	max-height: 400px;
+}
+
+.carouselText{
+	margin-bottom: 20px;
 }
 
 @font-face {
