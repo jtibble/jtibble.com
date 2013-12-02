@@ -4,38 +4,18 @@
 	<!-- Carousel items -->
 		<center>
 			<div class="carousel-inner">
-					<div class="active item">
-						<div class="carouselText weddingFont">bryan cable, best man, college friend</div>
-						<img src="img/wedding/party/bryan.jpg">
+                {{  
+                    _.each( model, function(person, index){ 
+                        var classText = 'item';
+                        if( index == 0 ){ classText += ' active'; }
+                }}
+					<div class="{{=classText}}">
+						<div class="carouselText weddingFont">
+                            <h2>{{=person.title}}, {{=person.subtitle}}</h2>
+                        </div>
+						<img src="img/wedding/party/{{=person.url}}">
 					</div>
-					<div class="item">
-						<div class="carouselText weddingFont">amy wensley, maid of honor, bride's sister</div>
-						<img src="img/wedding/party/amy.jpg">
-					</div>
-					<div class="item">
-						<div class="carouselText weddingFont">mark bishop, college friend</div>
-						<img src="img/wedding/party/mark.jpg">
-					</div>
-					<div class="item">
-						<div class="carouselText weddingFont">sarah tibble, groom's sister</div>
-						<img src="img/wedding/party/sarah.jpg">
-					</div>
-					<div class="item">
-						<div class="carouselText weddingFont">jim dinardo, college friend</div>
-						<img src="img/wedding/party/jim.jpg">
-					</div>
-					<div class="item">
-						<div class="carouselText weddingFont">laura goben, college friend</div>
-						<img src="img/wedding/party/laura.jpg">
-					</div>
-					<div class="item">
-						<div class="carouselText weddingFont">justin gibson, college friend</div>
-						<img src="img/wedding/party/justin.jpg">
-					</div>
-					<div class="item">
-						<div class="carouselText weddingFont">analissa forsgren, college friend</div>
-						<img src="img/wedding/party/analissa.jpg">
-					</div>
+                {{ }); }}
 			</div>
 		</center>
 		

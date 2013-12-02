@@ -1,11 +1,11 @@
-define(['text!templates/wedding/wedding.html',
+define([ 'text!templates/wedding/wedding.html',
 		
-		'text!templates/wedding/story.html',
-	    'text!templates/wedding/ceremony.html',
-	    'text!templates/wedding/party.html',
-	    'text!templates/wedding/registry.html',
-	    'text!templates/wedding/info.html',
-        'text!templates/wedding/photos.html'], function( template, 
+		 'text!templates/wedding/story.html',
+	     'text!templates/wedding/ceremony.html',
+	     'text!templates/wedding/party.html',
+	     'text!templates/wedding/registry.html',
+	     'text!templates/wedding/info.html',
+         'text!templates/wedding/photos.html' ], function( template, 
                                                          storyTemplate,
                                                          ceremonyTemplate, 
                                                          partyTemplate,
@@ -45,7 +45,53 @@ define(['text!templates/wedding/wedding.html',
 			};
 			
 			$('#weddingContainer').animate( setting, 500, function(){
-				$('#weddingContainer').html( partyTemplate );
+                
+                var weddingParty = [
+                    {
+                        title:      'bryan cable',
+                        subtitle:   'best man, college friend',
+                        url:        'bryan.jpg'
+                    },
+                    {
+                        title:      'amy wensley',
+                        subtitle:   'maid of honor, bride\'s sister',
+                        url:        'amy.jpg'
+                    },
+                    {
+                        title:      'mark bishop',
+                        subtitle:   'college friend',
+                        url:        'mark.jpg'
+                    },
+                    {
+                        title:      'sarah tibble',
+                        subtitle:   'groom\'s sister',
+                        url:        'sarah.jpg'
+                    },
+                    {
+                        title:      'jim dinardo',
+                        subtitle:   'college friend',
+                        url:        'jim.jpg'
+                    },
+                    {
+                        title:      'laura goben',
+                        subtitle:   'college friend',
+                        url:        'laura.jpg'
+                    },
+                    {
+                        title:      'justin gibson',
+                        subtitle:   'college friend',
+                        url:        'justin.jpg'
+                    },
+                    {
+                        title:      'analissa forsgren',
+                        subtitle:   'college friend',
+                        url:        'analissa.jpg'
+                    }                    
+                ]
+                
+                var renderedTemplate = _.template( partyTemplate, {model: weddingParty});
+                
+				$('#weddingContainer').html( renderedTemplate );
 				
 				$('#partyCarousel').carousel({
 					'interval': false	
