@@ -4,19 +4,20 @@
  }
 
 .weddingGradient{
-  background-image:url('../img/wedding/bg.jpg');
-  background-repeat:repeat-x;
+  background-image: url("../img/wedding/bg_tile.jpg");
+  background-repeat: repeat;
  }
 
-.weddingDoodle1{
-	background-image: url('../img/wedding/doodle1.png');
-	position: relative;
-	z-index: 0;
+.doodle{
+	position: absolute;
 }
-.weddingDoodle2{
-	background-image: url('../img/wedding/doodle2.png');
-	position: relative;
-	z-index: 0;
+
+#storyDoodle{
+	margin-left: -200px;
+}
+
+#storyDoodle2{
+	float: right;
 }
 
 .weddingHeaderContainer{
@@ -44,27 +45,18 @@
     width: 300px;
 }
 
-div {
-    font-family: Shadows Into Light Two, Helvetica, Arial, sans-serif;
+.gifListTitle {
+	padding-top: 30px;
+	font-size: 20px;
+}
+
+.gifListText {
+	padding: 30px;
 }
 
 a img{
     margin: 20px;
 }
-
-
-@font-face {
-	font-family: 'Shadows Into Light Two';
-	font-family: 'Stylish';
-	font-style: normal;
-	font-weight: 800;
-	src: url('fonts/Stylish.ttf');
-}
-
-/*.destinations div{
-	.roundedCorners;
-	.dropShadows;	
-}*/
 
 .article{
 	margin: 20px;
@@ -97,9 +89,7 @@ a img{
 }
 
 .center {
-     float: none;
-     margin-left: auto;
-     margin-right: auto;
+	margin: 0 auto;
 }
 
 img.thumbnail{
@@ -109,12 +99,23 @@ img.thumbnail{
 
 
 
-
+.headerLeftText {
+	background: url('../img/wedding/sprite.png') -313px 0px no-repeat;
+	background-repeat: no-repeat;
+	position: relative;
+	width: 500px;
+	height: 50px;
+	margin-top: -50px;
+	margin-left: -70px;
+	z-index: 3;
+}
 
 
 .menuItemBox {
-    background-clip: border-box;  
-    height: 180px;
+    background-clip: border-box; 
+	cursor: pointer;
+	height: 180px;
+	margin: 0 auto;
 }
 
 #menuItemBoxStory {
@@ -142,33 +143,55 @@ img.thumbnail{
     width: 290px;
 }
 
-.menuItemLink {
-    display: block;
-    width: 290px;
-    text-indent: -9999px;
+
+.weddingFont {
+	font-weight: 700;
+	font-family: Witness, Helvetica, Arial, sans-serif;
 }
 
-#menuItemLinkStory {
-    background: url('../img/wedding/sprite.png') -45px -660px no-repeat;
-    height: 180px;
+
+.carousel-inner img{
+	max-height: 400px;
 }
-#menuItemLinkCeremony {
-    background: url('../img/wedding/sprite.png') -320px -550px no-repeat;
-    height: 180px;
+
+.carouselText{
+	margin-bottom: 20px;
 }
-#menuItemLinkParty {
-    background: url('../img/wedding/sprite.png') -610px -580px no-repeat;
-    height: 180px;
+
+@font-face {
+	font-family: 'Witness';
+	font-family: 'Witness';
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/Witness.ttf');
 }
-#menuItemLinkRegistry {
-    background: url('../img/wedding/sprite.png') -25px -810px no-repeat;
-    height: 180px;
+
+.weddingFooter{
+    text-align: center;
+    margin-top: 200px;  
+	font-family: Witness, Helvetica, Arial, sans-serif;
+    font-size: 24px;
 }
-#menuItemLinkInfo {
-    background: url('../img/wedding/sprite.png') -310px -750px no-repeat;
-    height: 180px;
+
+.weddingFooter a{
+    font-size: 24px;
 }
-#menuItemLinkPhotos {
-    background: url('../img/wedding/sprite.png') -600px -780px no-repeat;
-    height: 180px;
+
+.weddingContainerWrapper{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.chalkboardImage{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 700px;
+}
+
+.chalkboardBackground {
+	background-image: url("../img/wedding/chalkboard.png");
+}
+
+.registryImage {
+    max-height: 50px;   
 }
