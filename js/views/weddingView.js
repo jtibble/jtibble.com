@@ -2,7 +2,13 @@ define(['text!templates/wedding/wedding.html',
 		
 		'text!templates/wedding/story.html',
 	    'text!templates/wedding/ceremony.html',
-	    'text!templates/wedding/party.html' ], function( template, storyTemplate, ceremonyTemplate, partyTemplate ){
+	    'text!templates/wedding/party.html',
+	    'text!templates/wedding/info.html'], 
+	   function( template, 
+				storyTemplate, 
+				ceremonyTemplate, 
+				partyTemplate,
+			    infoTemplate){
 	var view = Backbone.View.extend({
 		events: {
 			'click #menuItemBoxStory': 		'showStory',
@@ -74,7 +80,18 @@ define(['text!templates/wedding/wedding.html',
 			console.log('show registry');	
 		},
 		showInfo: function(){
-			console.log('show info');	
+			var setting = {
+				opacity: 0.0,
+				height: 'toggle'
+			};
+			
+			$('#weddingContainer').animate( setting, 500, function(){
+				$('#weddingContainer').html( infoTemplate );
+				$('#weddingContainer').animate( {
+					opacity: 1.0,
+					height: 'toggle'
+				});
+			});	
 		},
 		showPhotos: function(){
 			console.log('show photos');	
