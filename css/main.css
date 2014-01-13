@@ -143,12 +143,15 @@ img.thumbnail{
     width: 290px;
 }
 
-
 .weddingFont {
 	font-weight: 700;
 	font-family: Witness, Helvetica, Arial, sans-serif;
 }
 
+.weddingFontHeader {
+	font-weight: 700;
+	font-family: Witness, Helvetica, Arial, sans-serif;
+}
 
 .carousel-inner img{
 	max-height: 400px;

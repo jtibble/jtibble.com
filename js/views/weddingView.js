@@ -13,7 +13,6 @@ define([ 'text!templates/wedding/wedding.html',
                                                          infoTemplate,
                                                          photosTemplate){
 	var view = Backbone.View.extend({
-	var view = Backbone.View.extend({
 		events: {
 			'click #menuItemBoxStory': 		'showStory',
 			'click #menuItemBoxCeremony': 	'showCeremony',
@@ -148,6 +147,7 @@ define([ 'text!templates/wedding/wedding.html',
 					height: 'toggle'
 				});
 			});
+		},
 		showInfo: function(){
 			var setting = {
 				opacity: 0.0,
