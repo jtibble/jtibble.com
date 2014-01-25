@@ -150,7 +150,12 @@ img.thumbnail{
 
 .weddingFontHeader {
 	font-weight: 700;
+	font-size: 36px;
 	font-family: Witness, Helvetica, Arial, sans-serif;
+}
+
+.typewriterFont {
+	font-family: Executive, Helvetica, Arial, sans-serif;
 }
 
 .carousel-inner img{
@@ -167,6 +172,14 @@ img.thumbnail{
 	font-style: normal;
 	font-weight: 800;
 	src: url('fonts/Witness.ttf');
+}
+
+@font-face {
+	font-family: 'Executive';
+	font-family: 'Executive';
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/F25_Executive.otf');
 }
 
 .weddingFooter{
