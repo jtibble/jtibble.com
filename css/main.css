@@ -142,13 +142,29 @@ img.thumbnail{
     background: url('../img/wedding/sprite.png') -600px -311px no-repeat; 
     width: 290px;
 }
-
+	
+.weddingInfoContent {
+	height: 300px;
+	max-height: 300px;
+	max-width: 300px;
+	margin: 30px;
+	padding: 0px
+}
 
 .weddingFont {
 	font-weight: 700;
 	font-family: Witness, Helvetica, Arial, sans-serif;
 }
 
+.weddingFontHeader {
+	font-weight: 700;
+	font-size: 36px;
+	font-family: Witness, Helvetica, Arial, sans-serif;
+}
+
+.typewriterFont {
+	font-family: Executive, Helvetica, Arial, sans-serif;
+}
 
 .carousel-inner img{
 	max-height: 400px;
@@ -166,11 +182,24 @@ img.thumbnail{
 	src: url('fonts/Witness.ttf');
 }
 
+@font-face {
+	font-family: 'Executive';
+	font-family: 'Executive';
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/F25_Executive.otf');
+}
+
 .weddingFooter{
     text-align: center;
     margin-top: 200px;  
 	font-family: Witness, Helvetica, Arial, sans-serif;
     font-size: 24px;
+}
+
+#wedding-info-arrow{
+	height: 50px;
+	margin-bottom: 30px;
 }
 
 .weddingFooter a{
