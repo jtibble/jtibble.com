@@ -197,6 +197,11 @@ img.thumbnail{
     font-size: 24px;
 }
 
+#wedding-info-arrow{
+	height: 50px;
+	margin-bottom: 30px;
+}
+
 .weddingFooter a{
     font-size: 24px;
 }
