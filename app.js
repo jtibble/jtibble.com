@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router', 'ui.bootstrap']);
+var app = angular.module('app', ['ui.router', 'ui.bootstrap', 'uiGmapgoogle-maps']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     
@@ -9,7 +9,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "templates/home.html"
     }).state('wedding', {
         url: "/wedding",
-        templateUrl: "templates/wedding/wedding.html"
+        templateUrl: "templates/wedding/wedding.html",
+        controller: "WeddingController"
     }).state('bitcoin', {
         url: "/bitcoin",
         templateUrl: "templates/bitcoin.html"

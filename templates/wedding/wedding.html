@@ -10,31 +10,157 @@
 
 <div class="container weddingContainerWrapper">
 	<div class="row">
-		<div id="weddingContainer" class="span12"></div>
+		<div id="weddingContainer" class="span12">
+        
+            <!-- story -->
+            <div class="row"
+                 ng-show="activeSection == 'story'">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-10 chalkboardBackground text-center">
+                            <img src="img/wedding/story.png" class="chalkboardImage">
+                </div>
+                <div class="col-xs-1"></div>
+            </div>
+            
+            <!-- registry -->
+            <div class="row">
+                <div class="span8 offset2 weddingFontHeader"
+                 ng-show="activeSection == 'registry'">
+                    <center>
+                        <h2 class="weddingFontHeader">WE ARE REGISTERED AT</h2>
+                        <a target="_blank" href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=13146865&eventType=Wedding">
+                            <img class="registryImage" src="img/wedding/registry/bbb.png">
+                        </a>
+                        <br>
+                        <a target="_blank" href="http://www.honeyfund.com/wedding/bethandjohn2014">
+                            <img class="registryImage" src="img/wedding/registry/honeyfund.png">
+                        </a>
+                        <br>
+                        <a target="_blank" href="http://www.crateandbarrel.com/Gift-Registry/Bethany-Wensley-and-John-Tibble/r5101195">
+                            <img id="registryCrateAndBarrel" class="registryImage" src="img/wedding/registry/cb.png">
+                        </a>
+
+                    </center>
+                </div>
+            </div>
+            
+            <!--photos-->
+            <div class="row"
+                 ng-show="activeSection == 'photos'">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <carousel interval="myInterval">
+                        <slide ng-repeat="photo in photos" active="slide.active">
+                            <img ng-src="img/wedding/photos/{{photo}}" style="margin:auto;">
+                        </slide>
+                    </carousel>
+                </div>
+            </div>
+            
+            <!-- info -->
+            <div class="row"
+                 ng-if="activeSection == 'info'">
+	           <div class="col-xs-2"></div>
+                <div class="col-xs-8 text-center">
+                    <h2 class="weddingFontHeader">DIRECTIONS</h2>
+                    <h4 class="typewriterFont">
+                        <p>The First Presbyterian Church of Brighton is located in downtown Brighton,</p>
+                        <p>near the corner of Grand River Ave and Main St. Please park behind the church.</p>
+                        
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                            
+                                <img class="weddingInfoContent" src="img/wedding/info/church.jpg">
+                            </div>
+                            <div class="col-xs-6 text-center">
+                            
+                                <ui-gmap-google-map class="weddingInfoContent" center='mapBrighton.center' zoom='mapBrighton.zoom'>
+                                    <ui-gmap-marker idKey='1'
+                                                    coords='brightonCoordinate' >
+                                    </ui-gmap-marker>
+                                </ui-gmap-google-map>
+                            </div>
+                        </div>
+                    
+                        <p><img id="wedding-info-arrow" src="/img/wedding/arrow.png"></p>
+
+                        <p>The Howell Opera House is located in downtown Howell, at the corner of Grand River Ave and North Walnut St.</p>
+
+                        <div class="row">
+                            <div class="col-xs-6 text-center">
+                                <img class="weddingInfoContent" src="img/wedding/info/operaHouse.jpg">
+                            </div>
+                            <div class="col-xs-6 text-center">
+                                <ui-gmap-google-map class="weddingInfoContent" center='mapHowell.center' zoom='mapHowell.zoom'>
+                                    <ui-gmap-marker idKey='2'
+                                                    coords='howellCoordinate' >
+                                    </ui-gmap-marker>
+                                </ui-gmap-google-map>
+                            </div>
+                        </div>
+
+                        <p>Please park to the south, in the parking lot between Washington St. and Crane St.</p>
+                    </h4>
+                    <hr>
+                    <h2 class="weddingFontHeader">ATTIRE</h2>
+                    <h4 class="typewriterFont">
+                        <p>Please come dressed to impress!</p>
+                    </h4>
+                    <hr>
+                    <h2 class="weddingFontHeader">ACCOMODATIONS</h2>
+                    <h4 class="typewriterFont">
+                        <p>If you are looking to stay in the area, please join our other guests and make your reservation at the <a href="http://cwp.marriott.com/dtwbr/wensleytibblewedding/" target="_blank">Brighton Marriott</a>.</p>
+                    </h3>
+                    <hr>
+                </div>
+            </div>
+            
+            <!-- party -->
+            <div class="row"
+                 ng-show="activeSection == 'party'">
+                <div class="col-xs-8 col-xs-offset-2">
+                    <carousel interval="myInterval">
+                        <slide ng-repeat="person in party" active="slide.active">
+                            <div class="weddingFont">
+                                <h2>{{person.title}}, {{person.subtitle}}</h2>
+                            </div>
+                            <img ng-src="img/wedding/party/{{person.url}}" style="margin:auto;">
+                        </slide>
+                    </carousel>
+                </div>
+            </div>
+            
+            <!-- ceremony -->
+            <div class="row"
+                 ng-show="activeSection == 'ceremony'">
+                <div class="col-xs-8 col-xs-offset-2 text-center">
+                    <img class="img-responsive" src="img/wedding/ceremony.png">
+                </div>
+            </div>
+        </div>
 	</div>
 </div>
 
 <div class="container">
 	<div class="row">
-		<div class="span4">
-			<div id="menuItemBoxStory" class="menuItemBox"></div>	
+		<div class="col-xs-4">
+			<div id="menuItemBoxStory" class="menuItemBox" ng-click="showSection('story')"></div>	
 		</div>
-		<div class="span4">
-			<div id="menuItemBoxCeremony" class="menuItemBox"></div>	
+		<div class="col-xs-4">
+			<div id="menuItemBoxCeremony" class="menuItemBox" ng-click="showSection('ceremony')"></div>	
 		</div>
-		<div class="span4">
-			<div id="menuItemBoxParty" class="menuItemBox"></div>	
+		<div class="col-xs-4">
+			<div id="menuItemBoxParty" class="menuItemBox" ng-click="showSection('party')"></div>	
 		</div>
 	</div>
 	<div class="row">
-		<div class="span4">
-			<div id="menuItemBoxRegistry" class="menuItemBox"></div>	
+		<div class="col-xs-4">
+			<div id="menuItemBoxRegistry" class="menuItemBox" ng-click="showSection('registry')"></div>	
 		</div>
-		<div class="span4">
-			<div id="menuItemBoxInfo" class="menuItemBox"></div>	
+		<div class="col-xs-4">
+			<div id="menuItemBoxInfo" class="menuItemBox" ng-click="showSection('info')"></div>	
 		</div>
-		<div class="span4">
-			<div id="menuItemBoxPhotos" class="menuItemBox"></div>	
+		<div class="col-xs-4">
+			<div id="menuItemBoxPhotos" class="menuItemBox" ng-click="showSection('photos')"></div>	
 		</div>
 	</div>
 </div>

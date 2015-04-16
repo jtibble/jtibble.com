@@ -147,7 +147,7 @@ img.thumbnail{
 	height: 300px;
 	max-height: 300px;
 	max-width: 300px;
-	margin: 30px;
+	margin-bottom: 30px;
 	padding: 0px
 }
 
@@ -233,4 +233,19 @@ img.thumbnail{
 
 .registryImage {
     max-height: 50px;   
+}
+.angular-google-map-container { 
+	height: 300px;
+	max-height: 300px;
+	max-width: 300px;
+	margin-bottom: 30px;
+	padding: 0px}
+
+a.left.carousel-control {
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    color: black;
+}
+a.right.carousel-control {
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+    color: black;
 }

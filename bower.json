@@ -8,7 +8,8 @@
   "description": "Personal Site",
   "dependencies": {
     "angular-ui-router": "~0.2.13",
-    "angular-bootstrap": "~0.12.1"
+    "angular-bootstrap": "~0.12.1",
+    "angular-google-maps": "~2.0.19"
   },
   "main": "app.js",
   "license": "MIT",
