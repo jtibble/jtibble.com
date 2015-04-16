@@ -30,25 +30,25 @@ app.config(function($stateProvider, $urlRouterProvider) {
 });
 
 app.provider('FrameworkAJAX', function(){
-	return {
-		$get: ['$http', function( $http ){
-			return {
-				sendRequest: function(request, successCallback, errorCallback){
-					
-					if( !request.method || !request.url ){
-						console.log('Error making AJAX request: missing method, url, or data.');
-						return;
-					}
-					
-					return $http( request ).success( successCallback ).error( errorCallback );
-				}
-			};
-		}]		
-	};
+    return {
+        $get: ['$http', function( $http ){
+            return {
+                sendRequest: function(request, successCallback, errorCallback){
+
+                    if( !request.method || !request.url ){
+                        console.log('Error making AJAX request: missing method, url, or data.');
+                        return;
+                    }
+
+                    return $http( request ).success( successCallback ).error( errorCallback );
+                }
+            };
+        }]		
+    };
 });
 
 app.directive('header', function(){
-  return {
-    templateUrl: 'templates/headers/headerHomeTemplate.html'
-  };
+    return {
+        templateUrl: 'templates/headers/headerHomeTemplate.html'
+    };
 });
