@@ -7,6 +7,24 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
         url: "/home",
         templateUrl: "templates/home.html"
+    }).state('wedding', {
+        url: "/wedding",
+        templateUrl: "templates/wedding/wedding.html"
+    }).state('bitcoin', {
+        url: "/bitcoin",
+        templateUrl: "templates/bitcoin.html"
+    }).state('umich', {
+        url: "/umich",
+        templateUrl: "templates/layouts/gifList.html",
+        controller: "UMichController"
+    }).state('robotics', {
+        url: "/robotics",
+        templateUrl: "templates/layouts/gifList.html",
+        controller: "RoboticsController"
+    }).state('graphics', {
+        url: "/graphics",
+        templateUrl: "templates/layouts/gifList.html",
+        controller: "GraphicsController"
     });
 });
 
@@ -16,7 +34,7 @@ app.provider('FrameworkAJAX', function(){
 			return {
 				sendRequest: function(request, successCallback, errorCallback){
 					
-					if( !request.method || !request.url || !request.data ){
+					if( !request.method || !request.url ){
 						console.log('Error making AJAX request: missing method, url, or data.');
 						return;
 					}
