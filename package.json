@@ -1,0 +1,26 @@
+{
+  "name": "jtibble.com",
+  "version": "1.0.0",
+  "description": "Personal Site",
+  "main": "app.js",
+  "dependencies": {
+    "gulp": "^3.8.11"
+  },
+  "devDependencies": {
+    "gulp-jscs": "^1.5.2",
+    "gulp-jshint": "^1.10.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtibble/jtibble.com.git"
+  },
+  "author": "John Tibble (john@jtibble.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtibble/jtibble.com/issues"
+  },
+  "homepage": "https://github.com/jtibble/jtibble.com"
+}
