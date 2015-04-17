@@ -1,25 +1,29 @@
-app.controller('RoboticsController', function($scope, FrameworkAJAX) {
+app.controller('RoboticsController',
+               ['$scope', 'FrameworkAJAX', function($scope, FrameworkAJAX) {
     var request = {url: 'data/robotics.json', method: 'GET'};
     FrameworkAJAX.sendRequest(request, function(data) {
         $scope.Model = data;
     });
-});
+}]);
 
-app.controller('GraphicsController', function($scope, FrameworkAJAX) {
+app.controller('GraphicsController',
+               ['$scope', 'FrameworkAJAX', function($scope, FrameworkAJAX) {
     var request = {url: 'data/graphics.json', method: 'GET'};
     FrameworkAJAX.sendRequest(request, function(data) {
         $scope.Model = data;
     });
-});
+}]);
 
-app.controller('UMichController', function($scope, FrameworkAJAX) {
+app.controller('UMichController',
+               ['$scope', 'FrameworkAJAX', function($scope, FrameworkAJAX) {
     var request = {url: 'data/umich.json', method: 'GET'};
     FrameworkAJAX.sendRequest(request, function(data) {
         $scope.Model = data;
     });
-});
+}]);
 
-app.controller('WeddingController', function($scope, FrameworkAJAX) {
+app.controller('WeddingController',
+               ['$scope', 'FrameworkAJAX', function($scope, FrameworkAJAX) {
     
     $scope.showSection = function(section) {
         $scope.activeSection = section;
@@ -56,4 +60,4 @@ app.controller('WeddingController', function($scope, FrameworkAJAX) {
         center: $scope.howellCoordinate,
         zoom: 13
     };
-});
+}]);

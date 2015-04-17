@@ -58,6 +58,15 @@ a img{
     margin: 10px;
 }
 
+a img:hover{
+    cursor: pointer;
+    transform: scale(1.02,1.02);
+}
+
+#bitcoinLogo {
+    margin-bottom: 32px;
+}
+
 .article{
 	margin: 20px;
 	padding: 20px;
